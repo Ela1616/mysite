@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Python Full Course</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; margin:0; padding:0; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+#searchBox { padding:10px; width:300px; border-radius:10px; margin:20px auto; display:block; }
+.container { max-width:900px; margin:0 auto; text-align:center; }
+button { background-color: #1e3a8a; color: white; padding: 10px 20px; border-radius: 10px; border: none; cursor: pointer; margin: 5px; transition: 0.3s; font-size:16px;}
+button:hover { background-color: #3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Python Full Premium Course</header>
+
+<input type="text" id="searchBox" placeholder="Іздеу...">
+
+<div class="container">
+<button onclick="window.location.href='python_intro.html'">Python деген не?</button>
+<button onclick="window.location.href='install.html'">Python орнату</button>
+<button onclick="window.location.href='print_input.html'">print/input</button>
+<button onclick="window.location.href='variables.html'">Айнымалылар</button>
+<button onclick="window.location.href='if_else.html'">if/else</button>
+<button onclick="window.location.href='loops.html'">Циклдар</button>
+<button onclick="window.location.href='functions.html'">Функциялар</button>
+<button onclick="window.location.href='project_calc.html'">Калькулятор жобасы</button>
+<button onclick="window.location.href='project_bot.html'">Telegram бот жобасы</button>
+<button onclick="window.location.href='practice.html'">Практика</button>
+<button onclick="window.location.href='mini_test.html'">Мини-тест</button>
+<button onclick="window.location.href='videos.html'">YouTube сабақтары</button>
+</div>
+
+<script>
+const searchBox = document.getElementById('searchBox');
+const buttons = document.querySelectorAll('button');
+
+searchBox.addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  buttons.forEach(btn => {
+    const text = btn.textContent.toLowerCase();
+    btn.style.display = text.includes(query) ? 'inline-block' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Python деген не?</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; transition:0.3s; font-size:16px; text-decoration:none; display:inline-block; }
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Python деген не?</header>
+
+<div class="container">
+<p>Python – әлемдегі ең танымал, жеңіл әрі қуатты программалау тілі.</p>
+<ul style="text-align:left;">
+<li>Telegram боттар</li>
+<li>AI / Machine Learning</li>
+<li>Web backend</li>
+<li>Data Science</li>
+</ul>
+
+<a class="link" href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">▶ YouTube: Python деген не</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Python орнату</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; transition:0.3s; font-size:16px; text-decoration:none; display:inline-block; }
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Python орнату</header>
+
+<div class="container">
+<h3>Python:</h3>
+<a class="link" href="https://www.python.org/downloads/" target="_blank">python.org/downloads</a>
+
+<h3>VS Code:</h3>
+<a class="link" href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>
+
+<h3>Кеңейтім:</h3>
+<p>Extensions → Python → Install</p>
+
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>print/input</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; overflow-x:auto; text-align:left; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; transition:0.3s; font-size:16px; text-decoration:none; display:inline-block; }
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>print() және input()</header>
+
+<div class="container">
+<pre>
+print("Сәлем!")
+name = input("Атың кім? ")
+print("Қош келдің,", name)
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=k9TUPpGqYTo" target="_blank">▶ YouTube: print & input Tutorial</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Айнымалылар</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; overflow-x:auto; text-align:left; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; transition:0.3s; font-size:16px; text-decoration:none; display:inline-block; }
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Айнымалылар және типтер</header>
+
+<div class="container">
+<pre>
+age = 18      # int
+height = 1.75 # float
+name = "Aru"  # str
+</pre>
+
+<p>Мысал — қосынды табу:</p>
+<pre>
+a = float(input("1-сан: "))
+b = float(input("2-сан: "))
+print("Қосынды:", a + b)
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">▶ YouTube: Variables Tutorial</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>if / else</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; text-align:left; overflow-x:auto; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>if / else</header>
+
+<div class="container">
+<pre>
+age = int(input("Жасыңыз: "))
+if age >= 18:
+    print("Сіз ересексіз")
+else:
+    print("Сіз кішісіз")
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=f4KOjWS_KZs" target="_blank">▶ YouTube: if/else Tutorial</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Циклдар</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; text-align:left; overflow-x:auto; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Циклдар (for, while)</header>
+
+<div class="container">
+<pre>
+# for циклі
+for i in range(5):
+    print(i)
+
+# while циклі
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=6iF8Xb7Z3wQ" target="_blank">▶ YouTube: Циклдар Tutorial</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Функциялар</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; text-align:left; overflow-x:auto; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Функциялар</header>
+
+<div class="container">
+<pre>
+def greet(name):
+    return f"Сәлем, {name}!"
+
+print(greet("Aru"))
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=9Os0o3wzS_I" target="_blank">▶ YouTube: Функциялар Tutorial</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Калькулятор жобасы</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; text-align:left; overflow-x:auto; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Калькулятор жобасы</header>
+
+<div class="container">
+<pre>
+# Қарапайым калькулятор
+def calc():
+    a = float(input("1-сан: "))
+    b = float(input("2-сан: "))
+    op = input("Операция (+, -, *, /): ")
+    if op == "+":
+        return a + b
+    elif op == "-":
+        return a - b
+    elif op == "*":
+        return a * b
+    elif op == "/":
+        return a / b
+    else:
+        return "Қате операция!"
+
+print("Нәтиже:", calc())
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=7h1s2SojIRw" target="_blank">▶ YouTube: Python Calculator Project</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Telegram бот жобасы</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; text-align:left; overflow-x:auto; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Telegram бот жобасы</header>
+
+<div class="container">
+<pre>
+# Python Telegram Bot мысалы
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
+
+def start(update: Update, context: CallbackContext):
+    update.message.reply_text("Сәлем! Мен ботпын.")
+
+updater = Updater("TELEGRAM_BOT_TOKEN")
+updater.dispatcher.add_handler(CommandHandler("start", start))
+updater.start_polling()
+updater.idle()
+</pre>
+
+<a class="link" href="https://www.youtube.com/watch?v=5fO0j9cRdCw" target="_blank">▶ YouTube: Telegram Bot Tutorial</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Практика</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+pre { background:#1e3a8a; color:white; padding:15px; border-radius:10px; text-align:left; overflow-x:auto; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Практика</header>
+
+<div class="container">
+<p>Мына тапсырмаларды жасап көр:</p>
+<ul style="text-align:left;">
+<li>1. Қосынды табу</li>
+<li>2. Сандарды салыстыру</li>
+<li>3. for және while циклдарын қолдану</li>
+<li>4. Функция арқылы хабарлама шығару</li>
+</ul>
+
+<a class="link" href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">▶ YouTube: Python Practice</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Мини-тест</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>Мини-тест</header>
+
+<div class="container">
+<p>Сұрақтар:</p>
+<ol style="text-align:left;">
+<li>Python деген не?</li>
+<li>int, float, str типтері</li>
+<li>if/else мысалы</li>
+<li>for цикл мысалы</li>
+<li>while цикл мысалы</li>
+<li>Функция қалай жазылады?</li>
+<li>print() және input() қолдану</li>
+<li>Калькулятор жобасы қалай істейді?</li>
+<li>Telegram бот коды мысалы</li>
+<li>Python жобаларында практиканың мәні?</li>
+</ol>
+
+<a class="link" href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">▶ YouTube: Python Mini Test</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>YouTube сабақтары</title>
+<style>
+body { font-family: Arial; background:#e6f0fa; padding:30px; }
+header { background:#1e3a8a; color:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+button, a.link { background-color:#1e3a8a; color:white; padding:10px 20px; border-radius:10px; border:none; cursor:pointer; margin:5px; font-size:16px; text-decoration:none; display:inline-block; transition:0.3s;}
+button:hover, a.link:hover { background-color:#3b5ca8; }
+</style>
+</head>
+<body>
+
+<header>YouTube сабақтары</header>
+
+<div class="container">
+<p>Python сабақтары:</p>
+<a class="link" href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">Python Basics</a><br>
+<a class="link" href="https://www.youtube.com/watch?v=k9TUPpGqYTo" target="_blank">print & input</a><br>
+<a class="link" href="https://www.youtube.com/watch?v=f4KOjWS_KZs" target="_blank">if/else</a><br>
+<a class="link" href="https://www.youtube.com/watch?v=6iF8Xb7Z3wQ" target="_blank">Циклдар</a><br>
+<a class="link" href="https://www.youtube.com/watch?v=9Os0o3wzS_I" target="_blank">Функциялар</a><br>
+<a class="link" href="https://www.youtube.com/watch?v=7h1s2SojIRw" target="_blank">Калькулятор жобасы</a><br>
+<a class="link" href="https://www.youtube.com/watch?v=5fO0j9cRdCw" target="_blank">Telegram бот жобасы</a><br><br>
+<button onclick="window.location.href='index.html'">⬅ Артқа</button>
+</div>
+
+</body>
+</html>
